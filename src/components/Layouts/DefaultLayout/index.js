@@ -1,5 +1,6 @@
 import Header from "./Header/index.js";
 import Content from "./Content/index.js";
+import Footer from "./Footer/index.js";
 
 function DefaultLayout({ children }) {
     return ( 
@@ -7,6 +8,7 @@ function DefaultLayout({ children }) {
             <Header />
             <Content/>
             <div>{children}</div>
+            <Footer/>
         </div>
      );
 }
