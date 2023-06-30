@@ -25,17 +25,20 @@ function Home() {
     <>
       <h2>Home page</h2>
       <p>Đây là nơi load sản phẩm từ API</p>
-      {posts.map((post) => {
+      <div className='row'> 
+       {posts.map((post) => {
         return (
-          <div className="data-cart" key={post.id}>
+          <div className="data-cart col-3" key={post.id}>
             <div className="product-block-container" data-id={post.id} >
               <img src={post.img} alt={post.title} />
-              <h2>{post.name}</h2>
-              <p className="product-block-prices">{post.price}</p>
+              <h5>{post.name}</h5>
+              <p className="product-block-prices"> Price: {post.price}</p>
             </div>
           </div>
         );
       })}
+      </div>
+     
     </>
   );
 }

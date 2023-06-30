@@ -10,16 +10,16 @@ function App() {
             let Layout = route.layout;
             const Page = route.component;
             return (
-              <Route
-                key={index}
-                path={route.path}
-                element={
-                  <Layout>
-                    <Page />
-                  </Layout>
-                }
-              />
-            );
+                    <Route
+                      key={index}
+                      path={route.path}
+                      element={
+                              <Layout>
+                              <Page />
+                              </Layout>
+                      }
+                    />
+                  );
           })}
           {/* <Route path='/' element={<Home/>}
                         <Layout>
