@@ -3,7 +3,7 @@ const Menu1 = () => {
     return (
         //b4-navbar
         <nav className="navbar navbar-expand-sm navbar-light bg-light">
-            <a className="navbar-brand" href="/">A-LO-HAAA</a>
+            <a className="navbar-brand" href="/">MAVERICK DRESS</a>
             <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
             </button>

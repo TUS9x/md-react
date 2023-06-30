@@ -33,7 +33,7 @@ class Product extends Component {
     }
     state = {
         title: 'truong san pham',
-        products:            []    }
+        products:[]    }
     xoaSanPham=(id)=>{
             console.log('Xoa san pham:', id);
           //  const index = this.state.products.indexOf( x=>x.id===id );

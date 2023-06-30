@@ -12,15 +12,14 @@ function Home() {
   //     });
   // }, []);
   useEffect(()=>{
-
     axios({
       method:'get',
       url: 'https://645b91baa8f9e4d6e76c3740.mockapi.io/producDoAn',
       data:{},
     }).then(response=>{
       setPosts(response.data)
-    },[])
-  })
+    })
+  },[])
   return (
     <>
       <h2>Home page</h2>
