@@ -7,10 +7,18 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+<<<<<<< HEAD
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.0",
     "react-scripts": "^5.0.1",
+=======
+    "normalize.css": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.0",
+    "react-scripts": "5.0.1",
+>>>>>>> 9557b8750ee99f2f613781f6513d3c83f25a78ca
     "react-toastify": "^9.1.3",
     "web-vitals": "^2.1.4"
   },
@@ -39,6 +47,11 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
     "webpack": "^5.88.0"
+=======
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "sass": "^1.63.6"
+>>>>>>> 9557b8750ee99f2f613781f6513d3c83f25a78ca
   }
 }

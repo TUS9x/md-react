@@ -1,15 +1,34 @@
-import './App.css'; //load file css
-import Header from './component3/header'; //load header tu file
-import Container from './component3/container'
-import Footer from './component3/footer'
-//component App
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { publickRoutes } from './routes';
+
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Container ten="Tu" />
-      <Footer/>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          {publickRoutes.map((route, index) => {
+            let Layout = route.layout;
+            const Page = route.component;
+            return (
+              <Route
+                key={index}
+                path={route.path}
+                element={
+                  <Layout>
+                    <Page />
+                  </Layout>
+                }
+              />
+            );
+          })}
+          {/* <Route path='/' element={<Home/>}
+                        <Layout>
+                            <Page/> //children
+                        </Layout>
+                    /> */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

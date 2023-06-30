@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+<<<<<<< HEAD
 import './index.css';
 import App from './component3/App';
+=======
+import App from './App';
+>>>>>>> 9557b8750ee99f2f613781f6513d3c83f25a78ca
 import reportWebVitals from './reportWebVitals';
+import GlobalStyle from './components/GlobalStyles';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <GlobalStyle>
+      <App />
+    </GlobalStyle>
   </React.StrictMode>
 );
 
