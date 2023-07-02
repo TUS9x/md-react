@@ -16,11 +16,11 @@ function Home() {
     axios({
       method:'get',
       url: 'https://645b91baa8f9e4d6e76c3740.mockapi.io/producDoAn',
-      data:{},
-    }).then(response=>{
-      setPosts(response.data)
-    },[])
-  })
+      data: {},
+    }).then((response) => {
+      setPosts(response.data);
+    });
+  }, []);
   return (
     <>
       <h2>Home page</h2>
@@ -28,7 +28,7 @@ function Home() {
       {posts.map((post) => {
         return (
           <div className="data-cart" key={post.id}>
-            <div className="product-block-container" data-id={post.id} >
+            <div className="product-block-container" data-id={post.id}>
               <img src={post.img} alt={post.title} />
               <h2>{post.name}</h2>
               <p className="product-block-prices">{post.price}</p>
