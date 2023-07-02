@@ -1,0 +1,11 @@
+.containerFluid .sectionSearch {
+    box-shadow: 0px 1px 1px rgb(0 0 0/12%);
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 5px;
+    padding-top: 10px;
+    margin: 5px 0;
+}
+.containerFluid p span {
+    text-align: center;
+    
+}

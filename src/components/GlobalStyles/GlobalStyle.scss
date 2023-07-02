@@ -12,14 +12,15 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 90%;
   background-color: #ffffff;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Overpass, sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   text-rendering: optimizeSpeed; // tôi ưu để hiện thị nhanh nhất
 }
