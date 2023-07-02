@@ -9,9 +9,9 @@ function Header() {
               <img src="./image/logo/MTC_FinalLogos-01.png" width={'60%'} alt="anh" />
             </a>
           </div>
-          <form className="form-inline my-2 my-lg-2 col-4">
-            <input className="form-control mr-md-2" type="text" placeholder="Search" />
-            <button className="btn btn-outline-secondary my-2 my-sm-0" type="submit">
+          <form className="form-inline my-2 my-lg-2 col-4 row" >
+            <input className="form-control mr-md-2 col-8" type="text" placeholder="Search" style={{fontSize:'large'}} />
+            <button className="btn btn-outline-secondary my-2 my-sm-0 col-3" type="submit" style={{fontSize:'large'}}>
               Search
             </button>
           </form>
@@ -34,7 +34,7 @@ function Header() {
             </div>
           </div>
         </div>
-        <nav className="navbar-expand-md navbar-light bg-secondary  row" style={{margin:'5px 0'}}>
+        <nav className="navbar-expand-md navbar-light bg-secondary  row" style={{margin:'5px 0', padding:'5px 0'}}>
           <ul className="navbar-nav col-12 justify-content-center row">
             <li className="nav-item col-2">
               <a className="nav-link" href="./aboutus" data-toggle="modal" data-target="#modal-aboutus">
