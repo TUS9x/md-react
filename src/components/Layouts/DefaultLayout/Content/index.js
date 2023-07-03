@@ -1,6 +1,6 @@
-function Content() {
+function Content({children}) {
   return (
-      <h2>  Content     </h2>
+      <>{children}</>
   );
 }
 

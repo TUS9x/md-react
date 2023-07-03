@@ -2,7 +2,7 @@ import "./header.css"
 function Header() {
   return (
     <>
-      <div className="containerFluid">
+      <div className="container">
         <div className="row" id="top-banner">
           <div className="col-lg-4 col-md-4 col-12" id="top-banner-logo">
             <a href="./" title="Maverick Dress">
@@ -34,36 +34,40 @@ function Header() {
             </div>
           </div>
         </div>
-        <nav className="navbar-expand-md navbar-light bg-secondary  row" style={{margin:'5px 0', padding:'5px 0'}}>
-          <ul className="navbar-nav col-12 justify-content-center row">
-            <li className="nav-item col-2">
-              <a className="nav-link" href="./aboutus" data-toggle="modal" data-target="#modal-aboutus">
-                <strong>ABOUT US</strong>
-              </a>
-            </li>
-            <li className="nav-item col-2 dropdown">
-              <a className="nav-link" href="./products" id="navbarDropdownMenuLink2">
-                <strong>PRODUCTS</strong>
-              </a>
-            </li>
-            <li className="nav-item col-1 " style={{fontSize:'larger'}}>
-              <a className="nav-link text-danger" href="./sale">
-                <strong>SALE</strong>
-              </a>
-            </li>
-            <li className="nav-item col-2">
-              <a className="nav-link" href="./contactus">
-                <strong>CONTACT US</strong>
-              </a>
-            </li>
-            <li className="nav-item col-2">
-              <a className="nav-link" href="./feedback">
-                <strong>FEEDBACK</strong>
-              </a>
-            </li>
-            
-          </ul>
-        </nav>
+      </div>
+      <div className="containerFuild">
+        <div>
+          <nav className="navbar-expand-md navbar-light bg-secondary  row" style={{margin:'5px 0', padding:'5px 0'}}>
+            <ul className="navbar-nav col-12 justify-content-center row">
+              <li className="nav-item col-2">
+                <a className="nav-link" href="./aboutus" data-toggle="modal" data-target="#modal-aboutus">
+                  <strong>ABOUT US</strong>
+                </a>
+              </li>
+              <li className="nav-item col-2 dropdown">
+                <a className="nav-link" href="./products" id="navbarDropdownMenuLink2">
+                  <strong>PRODUCTS</strong>
+                </a>
+              </li>
+              <li className="nav-item col-1 " style={{fontSize:'larger'}}>
+                <a className="nav-link text-danger" href="./sale">
+                  <strong>SALE</strong>
+                </a>
+              </li>
+              <li className="nav-item col-2">
+                <a className="nav-link" href="./contactus">
+                  <strong>CONTACT US</strong>
+                </a>
+              </li>
+              <li className="nav-item col-2">
+                <a className="nav-link" href="./feedback">
+                  <strong>FEEDBACK</strong>
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
       </div>
     </>
   );
