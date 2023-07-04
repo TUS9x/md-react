@@ -1,6 +1,13 @@
-function Cart() {
+import ShopContext from '../../components/GlobalState/ShopContext';
+import MainNavigation from '../../components/MainNavi/MainNavigation';
+import React, { useContext, useEffect } from 'react';
+function Cart(props) {
+  const context = useContext(ShopContext);
+  useEffect(() => {
+    console.log(context);
+  }, []);
   return (
-    <div>
+    <React.Fragment>
       <div className="" id="cartModal">
         <div className="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div className="modal-content">
@@ -19,7 +26,44 @@ function Cart() {
                 <div className="col-1" />
               </div>
               <hr />
-              <div className="cart-product"></div>
+              <main className="cart-product cart">
+                {context.cart.length <= 0 && <p>No Item in the Cart!</p>}
+                <ul>
+                  {context.cart.map((cartItem) => (
+                    <>
+                      <div className="product-block-container row" key={cartItem.id}>
+                        <div className="col-2 justify-content-center">
+                          <img src={cartItem.img} data-toggle="modal" data-target="#modelChiTietSanPham" />{' '}
+                        </div>
+                        <h2 className="col-5">{cartItem.name}</h2>
+                        <select name="size" id="xBrand" className="col-1 form-control">
+                          <option value="s">S</option>
+                          <option value="m" selected="selected">
+                            M
+                          </option>
+                          <option value="l">L</option>
+                          <option value="xl">XL</option>
+                          <option value="xxl">XXL</option>
+                        </select>
+                        <p className="product-block-prices form-control col-1" data-price={cartItem.price}>
+                          {cartItem.price}
+                        </p>
+                        <input
+                          className="cart-quantity-input form-control col-1"
+                          name="qty"
+                          type="number"
+                          defaultValue={cartItem.quantity}
+                        />
+                        <div className="col-1">
+                          <button onClick={context.removeProductFromCart.bind(this, cartItem.id)}>
+                            Remove
+                          </button>
+                          </div>
+                      </div>
+                    </>
+                  ))}
+                </ul>
+              </main>
               <hr />
               <div className="d-flex justify-content-end">
                 <h5 className="col-4">
@@ -39,8 +83,7 @@ function Cart() {
           </div>
         </div>
       </div>
-      ;
-    </div>
+    </React.Fragment>
   );
 }
 
