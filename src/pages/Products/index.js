@@ -1,6 +1,5 @@
-import React, { Component, useState, useEffect } from 'react';
+import React from 'react';
 import ShopContext from '../../components/GlobalState/ShopContext';
-import MainNavigation from '../../components/MainNavi/MainNavigation';
 const Products = (props) => {
   return (
     <ShopContext.Consumer>
@@ -14,12 +13,16 @@ const Products = (props) => {
               <div className="row col-12 ">
                 {context.products.map((post) => (
                   <div className="dataCart col-3" key={post.id} style={{ padding: '0' }}>
-                    <div className="productBlockContainer row" >
+                    <div className="productBlockContainer row justify-content-end" >
                       <img className='col-12' src={post.img} alt={post.title} />
-                      <h5 className='col-12'>{post.name}</h5>
-                      <p className="product-block-prices col-6"> Price: {post.price}</p>
-                      <div className='col-6' onClick={context.addProductToCart.bind(this, post)}>
-                        <img src="./image/logo/Icon-Bag-Outline-32.png" alt="img" />
+                      <div className='col-12 row'>
+                        <div className='col-10 row'>
+                          <h5 className='col-12'>{post.name}</h5>
+                          <p className="product-block-prices col-12"> Price: {post.price}</p>
+                        </div>
+                        <div className='col-2' onClick={context.addProductToCart.bind(this, post)}>
+                          <img src="./image/logo/Add-To-Cart.png" alt="img" style={{width:'32px'}}/>
+                        </div>
                       </div>
                     </div>
                   </div>
