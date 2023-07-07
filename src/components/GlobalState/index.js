@@ -1,6 +1,6 @@
 import React, { useState, useReducer, useEffect } from "react";
 import ShopContext from "./ShopContext";
-import { shopReducer, ADD_PRODUCT, REMOVE_PRODUCT } from "./reducers";
+import { shopReducer, ADD_PRODUCT, REMOVE_PRODUCT, UPDATE } from "./reducers";
 import axios from 'axios';
 function GlobalState(props) {
     const [products, setPosts] = useState([]);
@@ -13,15 +13,8 @@ function GlobalState(props) {
           setPosts(response.data);
         });
       }, []);
-      // console.log(products)
-//   const products = [
-//     { id: "p1", title: "Gaming Mouse", price: 29.99 },
-//     { id: "p2", title: "Harry Potter 3", price: 9.99 },
-//     { id: "p3", title: "Used plastic bottle", price: 0.99 },
-//     { id: "p4", title: "Half-dried plant", price: 2.99 }
-//   ];
 
-  // const [cart, setCart] = useState([]);
+      console.log(products)
 
   const [cartState, dispatch] = useReducer(shopReducer, { cart: [] });
 
@@ -32,6 +25,9 @@ function GlobalState(props) {
   const removeProductFromCart = productId => {
     dispatch({ type: REMOVE_PRODUCT, productId: productId });
   };
+  const upDate = productId => {
+    dispatch({ type: UPDATE, productId: productId });
+  };
 
   return (
     <ShopContext.Provider
@@ -39,7 +35,8 @@ function GlobalState(props) {
         products: products,
         cart: cartState.cart,
         addProductToCart: addProductToCart,
-        removeProductFromCart: removeProductFromCart
+        removeProductFromCart: removeProductFromCart,
+        upDate: upDate
       }}
     >
       {props.children}
