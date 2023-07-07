@@ -1,3 +1,11 @@
-#topBannerIconsAccount a{
-
+.homePageBrands div a img { 
+    max-height: 50px;
+}
+.homePageBrands div a {
+    padding: 0 10px;
+}
+.homePageBrands {
+    display: flex;
+    float: left;
+    margin: 10px 0;
 }

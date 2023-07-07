@@ -1,12 +1,8 @@
 import React from "react";
 export default React.createContext({
-    products: [
-    // { id: "p1", title: "Gaming Mouse1", price: 29.99 },
-    // { id: "p2", title: "Harry Potter 3", price: 9.99 },
-    // { id: "p3", title: "Used plastic bottle", price: 0.99 },
-    // { id: "p4", title: "Half-dried plant", price: 2.99 }
-  ],
+  products: [  ],
   cart: [],
   addProductToCart: product => {},
-  removeProductFromCart: productId => {}
+  removeProductFromCart: productId => {},
+  upDate: productId => {}
 });

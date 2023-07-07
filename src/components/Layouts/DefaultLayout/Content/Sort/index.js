@@ -2,59 +2,26 @@ import './sort.css';
 const Sort = () => {
   return (
     <div className="container">
-      <div className="row sectionSearch justify-content-center">
-        <p className="col-12 row">
+      <div className="row sectionSearch">
+        <p className="col-12 row justify-content-center">
           <span className="sectionSearchTotal col-4">Total Products: ..</span>
-          <span className="col-8">Find your ideal here </span>
+          <span className="col-7"><div>Sort by:</div> </span>
         </p>
-        <form className="sectionSearchForm form-group col-12 row" id="sectionSearchForm">
-          <span className="sectionSearchItem col-4 row">
-            <label className="sectionSearchLabel col-4" htmlFor="xBrand">
-              Brand:
-            </label>
-            <select name="xBrand" id="xBrand" className="sectionSearchSelect form-control col-8">
-              <option>All</option>
-              <option value="banner">Banner</option>
-              <option value="david-luke">David-luke</option>
-              <option value="one-all">One-all</option>
-              <option value="trutex">Trutex</option>
-            </select>
+        <form className="sectionSearchForm form-group col-12 row justify-content-center" id="sectionSearchForm">
+          <span className="sectionSearchItem col-4 row justify-content-center">
+            <button className="btn btn-outline-secondary sectionSearchLabel col-10">
+            Price Low to High
+            </button>            
           </span>
-          <span className="sectionSearchItem col-4 row">
-            <label className="sectionSearchLabel col-4" htmlFor="xSort">
-              Color:
-            </label>
-            <select name="xColour" id="xColour" className="sectionSearchSelect form-control col-8">
-              <option>All</option>
-              <option value="amber">Amber</option>
-              <option value="black">Black</option>
-              <option value="bottle-green">Bottle Green</option>
-              <option value="burgundy">Burgundy</option>
-              <option value="dark-royal">Dark Royal</option>
-              <option value="emerald">Emerald</option>
-              <option value="grey">Grey</option>
-              <option value="jade">Jade</option>
-              <option value="marl-grey">Marl Grey</option>
-              <option value="maroon">Maroon</option>
-              <option value="navy">Navy</option>
-              <option value="purple">Purple</option>
-              <option value="red">Red</option>
-              <option value="royal">Royal</option>
-              <option value="scarlet">Scarlet</option>
-              <option value="school-grey">School Grey</option>
-              <option value="sky">Sky</option>
-            </select>
+          <span className="sectionSearchItem col-4 row justify-content-center">
+            <button className="btn btn-outline-secondary sectionSearchLabel col-10">
+            Price High to Low
+            </button>           
           </span>
-          <span className="sectionSearchItem col-4 row">
-            <label className="sectionSearchLabel col-4" htmlFor="xSort">
-              Sort By:
-            </label>
-            <select name="xSort" id="xBrand" className="sectionSearchSelect form-control col-8">
-              <option>Recommend</option>
-              <option value="priceLowToHigh">Price Low to High</option>
-              <option value="priceHighToLow">Price High to Low</option>
-              <option value="productName">Product Name</option>
-            </select>
+          <span className="sectionSearchItem col-4 row justify-content-center">
+            <button className="btn btn-outline-secondary sectionSearchLabel col-10">
+            Product Name
+            </button>           
           </span>
         </form>
       </div>
