@@ -1,28 +1,19 @@
-import {ADD_COLOR,ADD_BRAND,ADD_SORTBY,FILTER_SORT_PRODUCTS,SEARCH_PRODUCTS} from './constants'
+import { SORT_LOW_TO_HIGHT,SORT_HIGHT_TO_LOW,SORT_PRODUCTS_NAME,SEARCH_PRODUCTS} from './constants'
 
-
-
-
-export const addColor =(payload) =>({
-            type: ADD_COLOR,
+export const sortLowToHight =(payload) =>({
+            type: SORT_LOW_TO_HIGHT,
             payload
             })
-export const addBrand =(payload) =>({
-            type: ADD_BRAND,
-            payload
-            })
-export const addSortby =(payload) =>({
-    type: ADD_SORTBY,
+export const sortHightToLow =(payload) =>({
+    type: SORT_HIGHT_TO_LOW,
     payload
     })
-
-export const filterSortProducts = (payload)=>({
-    type: FILTER_SORT_PRODUCTS,
+export const sortProductName =(payload) =>({
+    type: SORT_PRODUCTS_NAME,
     payload
-
-})
-export const searchProduct = (payload)=>({
-    type: SEARCH_PRODUCTS,
-    payload
-
-})
+    })
+    export const searchProducts =(payload) =>({
+        type: SEARCH_PRODUCTS,
+        payload
+        })
+    

@@ -5,7 +5,6 @@ import {actions} from '../../../../store'
 const Sort = () => {
   const storeContext = useContext(Context)
   const [state,dispatch] = storeContext
-  const {condition}=state
   return (
     <div className="container">
       <div className="row sectionSearch">
@@ -13,23 +12,29 @@ const Sort = () => {
           <span className="sectionSearchTotal col-4">Total Products: ..</span>
           <span className="col-7"><div>Sort by:</div> </span>
         </p>
-        <form className="sectionSearchForm form-group col-12 row justify-content-center" id="sectionSearchForm">
+        <div className="sectionSearchForm form-group col-12 row justify-content-center" id="sectionSearchForm">
           <span className="sectionSearchItem col-4 row justify-content-center">
-            <button className="btn btn-outline-secondary sectionSearchLabel col-10">
+            <button className="btn btn-outline-secondary sectionSearchLabel col-10"
+           onClick={()=>dispatch(actions.sortLowToHight())}
+            >
             Price Low to High
             </button>            
           </span>
           <span className="sectionSearchItem col-4 row justify-content-center">
-            <button className="btn btn-outline-secondary sectionSearchLabel col-10">
+            <button className="btn btn-outline-secondary sectionSearchLabel col-10"
+             onClick={()=>dispatch(actions.sortHightToLow())}
+            >
             Price High to Low
             </button>           
           </span>
           <span className="sectionSearchItem col-4 row justify-content-center">
-            <button className="btn btn-outline-secondary sectionSearchLabel col-10">
+            <button className="btn btn-outline-secondary sectionSearchLabel col-10"
+        onClick={()=>dispatch(actions.sortProductName())}
+            >
             Product Name
             </button>           
           </span>
-        </form>
+        </div>
       </div>
     </div>
   );

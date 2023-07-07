@@ -25,11 +25,7 @@ function Header() {
               type="text"
               placeholder="Search"
               style={{ fontSize: 'large' }}
-              onChange={e=> {
-                dispatch(actions.searchProduct(e.target.value))
-                dispatch(actions.filterSortProducts(condition))
-                }
-              }             
+              onChange={(e)=>dispatch(actions.searchProducts(e.target.value))}        
             />
             <button
               className="btn btn-outline-secondary my-2 my-sm-0 col-3"

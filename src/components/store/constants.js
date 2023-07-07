@@ -1,6 +1,5 @@
 
-export const ADD_COLOR ='addColor'
-export const ADD_BRAND = 'addBrand'
-export const ADD_SORTBY = 'addSortby'
-export const FILTER_SORT_PRODUCTS = 'filterSortProducts'
-export const SEARCH_PRODUCTS = 'searchProduct'
+export const SORT_LOW_TO_HIGHT ='sortLowToHight'
+export const SORT_HIGHT_TO_LOW = 'sortHightToLow'
+export const SORT_PRODUCTS_NAME = 'sortProductsName'
+export const SEARCH_PRODUCTS = 'searchProducts'
