@@ -1,6 +1,7 @@
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 
+//prev Reducer
 const addProductToCart = (product, state) => {
   console.log("adding product", product);
   const updatedCart = [...state.cart];
@@ -39,6 +40,7 @@ const removeProductFromCart = (productId, state) => {
   return { ...state, cart: updatedCart };
 };
 
+//Reducer
 export const shopReducer = (state, action) => {
   switch (action.type) {
     case ADD_PRODUCT:

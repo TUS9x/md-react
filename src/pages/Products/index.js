@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import Context from '../../components/store/Context';
+
 import ShopContext from '../../components/GlobalState/ShopContext';
-const Products = (props) => {
+
+function Products (props)  {
+  const storeContext = useContext(Context)
+  const[state,dispatch] = storeContext
+  console.log("productsRender",state.productsRender);
   return (
     <ShopContext.Consumer>
       {(context) => (
@@ -11,7 +17,7 @@ const Products = (props) => {
               style={{ border: '1px solid rgb(201, 201, 201)', borderRadius: '5px' }}
             >
               <div className="row col-12 ">
-                {context.products.map((post) => (
+                {state.productsRender.map((post) => (
                   <div className="dataCart col-3" key={post.id} style={{ padding: '0' }}>
                     <div className="productBlockContainer row justify-content-end" >
                       <img className='col-12' src={post.img} alt={post.title} />

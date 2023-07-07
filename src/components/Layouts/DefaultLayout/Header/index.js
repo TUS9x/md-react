@@ -3,8 +3,13 @@ import MainNavigation from '../../../MainNavi/MainNavigation';
 import ShopContext from '../../../GlobalState/ShopContext';
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
+import Context from '../../../store/Context';
+import {actions} from '../../../store'
 function Header() {
   const context = useContext(ShopContext);
+  const storeContext = useContext(Context)
+  const [state,dispatch] =storeContext
+  const {condition}=state
   return (
     <>
       <div className="container">
@@ -20,6 +25,11 @@ function Header() {
               type="text"
               placeholder="Search"
               style={{ fontSize: 'large' }}
+              onChange={e=> {
+                dispatch(actions.searchProduct(e.target.value))
+                dispatch(actions.filterSortProducts(condition))
+                }
+              }             
             />
             <button
               className="btn btn-outline-secondary my-2 my-sm-0 col-3"
