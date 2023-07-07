@@ -1,12 +1,11 @@
+import MyDate from "../Content/Date";
 function Footer() {
   return (
     <div id="footer" className="containerFluid bg-secondary row justify-content-center" style={{fontSize:'small',color:'white', paddingTop:'0.5rem'} }>
       <div id="footerInner" className="row col-12">
         <div id="footerLeft" className="col-8">
-          Time: &nbsp;
-          <a id="time" href="./">
-          </a>
-          <br /> Email:&nbsp;
+          <div className="row"><div className="col-1">Time:</div> <MyDate className="col-8"/></div>
+          Email:&nbsp;
           <a href="#">ex@ex.com</a>&nbsp;&nbsp; &nbsp;&nbsp;Telephone:&nbsp;
           <a href="tel:+441432343532">0000&nbsp;00&nbsp;00&nbsp;00</a>&nbsp;&nbsp;
           <br /> Fax:

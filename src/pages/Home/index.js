@@ -3,7 +3,6 @@ import Products from '../Products';
 function Home() {
   return (
     <>
-      <Sort/>
       <Products/>
     </>
   );

@@ -23,7 +23,7 @@ function Cart(props) {
                   <div className="col-2" />
                   <div className="col-5">Product Name</div>
                   <div className="col-2">Size/Qty</div>
-                  <div className="col-2">Price</div>
+                  <div className="col-2 ">Price</div>
                   <div className="col-1" />
                 </div>
               </div>
@@ -47,24 +47,26 @@ function Cart(props) {
                           <option value="xxl">XXL</option>
                         </select>
                       </div>
-                      <div className="col-12 form-inline row">
-                        <input
-                          className="cart-quantity-input form-control col-12"
-                          name="qty"
-                          type="number"
-                          defaultValue={cartItem.quantity}
-                          style={{ padding: '5px 2px' }}
-                          onClick={context.upDate.bind(this, cartItem.id)}
-                          onChange={(e) => {
-                            cartItem.quantity = e.target.value;
-                            console.log(cartItem.quantity);
-                            return;
-                          }}
-                        />
+                      
+                        <div className='col-12'>
+                          <input
+                            className="cart-quantity-input col-12 form-control"
+                            name="qty"
+                            type="number"
+                            defaultValue={cartItem.quantity}
+                            style={{ padding: '5px 2px' }}
+                            onClick={context.upDate.bind(this, cartItem.id)}
+                            onChange={(e) => {
+                              cartItem.quantity = e.target.value;
+                              console.log(cartItem.quantity);
+                              return;
+                            }}
+                          />
+                        </div>
                         <div style={{ display: 'none' }}>{(total += cartItem.price * 1 * (cartItem.quantity * 1))}</div>
-                      </div>
+                      
                     </div>
-                    <p className="product-block-prices  form-inline col-2" data-price={cartItem.price}>
+                    <p className="product-block-prices  form-inline col-2 justify-content-center" data-price={cartItem.price}>
                       ${cartItem.price}
                     </p>
                     <div className="col-1 row">
