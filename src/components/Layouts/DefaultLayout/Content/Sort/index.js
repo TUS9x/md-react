@@ -9,7 +9,7 @@ const Sort = () => {
     <div className="container">
       <div className="row sectionSearch">
         <p className="col-12 row justify-content-center">
-          <span className="sectionSearchTotal col-4">Total Products: ..</span>
+          <span className="sectionSearchTotal col-4">Total Products: 32</span>
           <span className="col-7"><div>Sort by:</div> </span>
         </p>
         <div className="sectionSearchForm form-group col-12 row justify-content-center" id="sectionSearchForm">
